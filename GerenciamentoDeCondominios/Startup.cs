@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using GerenciamentoDeCondominios.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +25,9 @@ namespace GerenciamentoDeCondominios
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //services.addDbContext<Contexto>(opcoes => opcoes.UseSqlServer(Configuration.GetConnectionString("ConexaoDB"));
+            services.AddDbContext<Contexto>(op => op.UseSqlServer(Configuration.GetConnectionString("ConexaoDB")));
+            services.AddControllersWithViews();//Estamos Utilizando Padrão MVC
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,12 +43,12 @@ namespace GerenciamentoDeCondominios
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseHttpsRedirection();//http
+            app.UseStaticFiles();//js html css
 
-            app.UseRouting();
+            app.UseRouting();//roteamento, chegar às páginas desejadas
 
-            app.UseAuthorization();
+            app.UseAuthorization();//não são todos os usuários que podem acessar as páginas
 
             app.UseEndpoints(endpoints =>
             {

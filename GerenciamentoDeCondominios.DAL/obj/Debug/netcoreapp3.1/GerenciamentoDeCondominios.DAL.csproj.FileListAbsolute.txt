@@ -1,0 +1,4 @@
+C:\Users\User\source\repos\GerenciamentoDeCondominios\GerenciamentoDeCondominios.DAL\bin\Debug\netcoreapp3.1\GerenciamentoDeCondominios.BLL.dll
+C:\Users\User\source\repos\GerenciamentoDeCondominios\GerenciamentoDeCondominios.DAL\obj\Debug\netcoreapp3.1\GerenciamentoDeCondominios.DAL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\GerenciamentoDeCondominios\GerenciamentoDeCondominios.DAL\obj\Debug\netcoreapp3.1\GerenciamentoDeCondominios.DAL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GerenciamentoDeCondominios\GerenciamentoDeCondominios.DAL\obj\Debug\netcoreapp3.1\GerenciamentoDeCondominios.DAL.AssemblyInfo.cs
