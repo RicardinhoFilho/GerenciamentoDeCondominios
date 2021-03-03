@@ -1,5 +1,7 @@
 using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL;
+using GerenciadorCondominios.DAL.Interfaces;
+using GerenciadorCondominios.DAL.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,9 +24,14 @@ namespace GerenciadorCondominios
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Contexto>(opcoes => opcoes.UseSqlServer(Configuration.GetConnectionString("ConexaoDB")));
+            
             services.AddIdentity<Usuario, Funcao>().AddEntityFrameworkStores<Contexto>();
 
-            
+            services.AddAuthentication();
+
+            services.AddAuthorization();
+
+            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();//Precisamos incluir as classes e as interfaces que iremos utilizar 
 
 
             
@@ -49,14 +56,14 @@ namespace GerenciadorCondominios
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication();
+           // app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Usuarios}/{action=Login}/{id?}");
+                    pattern: "{controller=Usuarios}/{action=Index}/{id?}");
             });
         }
     }

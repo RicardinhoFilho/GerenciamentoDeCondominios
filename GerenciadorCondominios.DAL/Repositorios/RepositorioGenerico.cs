@@ -19,7 +19,7 @@ namespace GerenciadorCondominios.DAL.Repositorios
             try
             {
                 _contexto.Set<TEntity>().Update(entity);//Atualizando a tabela
-                await _contexto.SaveChangesAsync();//como nosso método é assincrono, precisamos utilizar wait para salvarmos nosso contexto
+                await _contexto.SaveChangesAsync();//como nosso método é assincrono, precisamos utilizar await para salvarmos nosso contexto
             }
             catch (Exception ex)
             {
@@ -44,16 +44,30 @@ namespace GerenciadorCondominios.DAL.Repositorios
 
         public async Task Excluir(int id)
         {
-            var entity = await PegarPeloId(id);//Utilizamos a função pegar pelo id para identificar o elemento requerido
-            _contexto.Set<TEntity>().Remove(entity);
-            await _contexto.SaveChangesAsync();
+            try
+            {
+                var entity = await PegarPeloId(id);//Utilizamos a função pegar pelo id para identificar o elemento requerido
+                _contexto.Set<TEntity>().Remove(entity);
+                await _contexto.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task Excluir(string id)
         {
-            var entity = await PegarPeloId(id);//Utilizamos a função pegar pelo id para identificar o elemento requerido
-            _contexto.Set<TEntity>().Remove(entity);
-            await _contexto.SaveChangesAsync();
+            try
+            {
+                var entity = await PegarPeloId(id);//Utilizamos a função pegar pelo id para identificar o elemento requerido
+                _contexto.Set<TEntity>().Remove(entity);
+                await _contexto.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task Inserir(TEntity entity)

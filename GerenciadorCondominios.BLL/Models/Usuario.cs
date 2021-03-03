@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GerenciadorCondominios.BLL.Models
 {
     public class Usuario : IdentityUser<string>
     {
+        [Required (ErrorMessage ="O campo {0} é obrigatório")]
         public string CPF { get; set; }
         public string Foto { get; set; }
 
