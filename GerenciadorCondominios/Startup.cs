@@ -2,6 +2,7 @@ using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL;
 using GerenciadorCondominios.DAL.Interfaces;
 using GerenciadorCondominios.DAL.Repositorios;
+using GerenciadorCondominios.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -31,9 +32,11 @@ namespace GerenciadorCondominios
 
             services.AddAuthorization();
 
-            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();//Precisamos incluir as classes e as interfaces que iremos utilizar 
 
-
+            services.ConfigurarRepositorios();//Arquivo de extenção localizado "GerenciarCondominios.DAL"/"ConfigurarRepositórioExtension" 
+            services.ConfigurNomeUuario();
+            services.ConfigurarSemnhaDoUsuario();
+            services.ConfigurarCookies();
             
 
             services.AddControllersWithViews();

@@ -37,9 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
     <Folder Include="ViewComponents\" />
-    <Folder Include="wwwroot\Imagens\" />
   </ItemGroup>
 
   <ItemGroup>

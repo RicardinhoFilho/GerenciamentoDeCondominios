@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GerenciadorCondominios.DAL.Migrations
 {
-    public partial class criacaoDB : Migration
+    public partial class cracao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -359,9 +359,9 @@ namespace GerenciadorCondominios.DAL.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Descricao", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "d75ccf2f-d11e-4f91-af62-5920c916680a", "7d3bd0ec-8566-4ab4-bdbe-bea8632cb858", "Morador do Prédio", "Morador", "MORADOR" },
-                    { "316e0515-3cd4-47f0-93a8-e0cf724f0c7e", "8731ecc4-66ad-4876-8891-a0c0a15257cb", "Síndico do Prédio", "Sindico", "SINDICO" },
-                    { "e1e53628-b915-4603-896d-10fef00b45a6", "18802070-f819-4af5-b195-39aa98578280", "Administrador do Prédio", "Administrador", "ADMINISTRADOR" }
+                    { "1564bcd8-fbac-49d5-bb0a-76ca82bd6d51", "0e1b7cbb-f099-404f-8ad9-952970b5f707", "Morador do Prédio", "Morador", "MORADOR" },
+                    { "591bcaa2-e349-4d94-8673-d0bddb0aa7ef", "cfbdd748-84d0-4244-9e0a-ffbb2eeea80d", "Síndico do Prédio", "Sindico", "SINDICO" },
+                    { "eea9063b-5f49-4086-8c74-e814781c7e90", "4a438ed9-277d-43bd-8faf-ba8b86899cc1", "Administrador do Prédio", "Administrador", "ADMINISTRADOR" }
                 });
 
             migrationBuilder.InsertData(
