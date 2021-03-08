@@ -16,7 +16,7 @@ namespace GerenciadorCondominios.DAL.Interfaces
 
         Task<Usuario> PegarUsuarioPeloEmail(string email);
 
-        
+        Task AtualizarUsuario(Usuario usuario);
     
     
     

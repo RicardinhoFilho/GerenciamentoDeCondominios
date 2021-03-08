@@ -25,9 +25,9 @@ namespace GerenciadorCondominios.Controllers
             this.webHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await usuarioRepositorio.PegarTodos());
         }
 
 
@@ -117,6 +117,32 @@ namespace GerenciadorCondominios.Controllers
             return View(nome);
         }
 
+        public IActionResult Reprovado(string nome)
+        {
+            return View(nome);
+        }
+
+        public async Task<JsonResult> AprovarUsuario(string usuarioId)
+        {
+            Usuario usuario = await usuarioRepositorio.PegarPeloId(usuarioId);
+            usuario.Status = StatusConta.Aprovado;
+
+            await usuarioRepositorio.IncluirUsuarioEmFuncao(usuario, "Morador");
+            await usuarioRepositorio.AtualizarUsuario(usuario);
+
+            return Json(true);
+        }
+
+        public async Task<JsonResult> ReprovarUsuario(string usuarioId)
+        {
+            Usuario usuario = await usuarioRepositorio.PegarPeloId(usuarioId);
+            usuario.Status = StatusConta.Reprovado;
+
+            await usuarioRepositorio.AtualizarUsuario(usuario);
+
+            return Json(true);
+        }
+
         [HttpGet]
         public async Task<IActionResult> Login()
         {
@@ -148,7 +174,8 @@ namespace GerenciadorCondominios.Controllers
                     }
                     else if (usuario.PrimeiroAcesso == true)
                     {
-                        return View("RedefinirSenha", usuario);
+                        
+                       return RedirectToAction(nameof(Index));
                     }
                     else
                     {
@@ -182,6 +209,8 @@ namespace GerenciadorCondominios.Controllers
             await usuarioRepositorio.DeslogarUsuario();
             return RedirectToAction("Login");
         }
+
+       
 
     }
 }
