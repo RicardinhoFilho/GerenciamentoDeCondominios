@@ -385,3 +385,4 @@ C:\Users\User\Desktop\GerenciamentoDeCondominios\GerenciadorCondominios\obj\Debu
 C:\Users\User\Desktop\GerenciamentoDeCondominios\GerenciadorCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SideNav.cshtml.g.cs
 C:\Users\User\Desktop\GerenciamentoDeCondominios\GerenciadorCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\User\Desktop\GerenciamentoDeCondominios\GerenciadorCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Index.cshtml.g.cs
+C:\Users\User\Desktop\GerenciamentoDeCondominios\GerenciadorCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\GerenciarUsuario.cshtml.g.cs

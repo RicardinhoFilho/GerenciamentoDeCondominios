@@ -65,14 +65,14 @@
 
                             <td class="new badge purple darken-3 btnAprovar" onclick="AprovarUsuario('@item.Id', '@item.UserName')"><i class="material-icons">thumb_up</i></td>
 
-                            <td class="new badge purple darken-3 btnReprovar" onclick="ReprovarUsuario('@item.Id', '@item.UserName')"><i class="material-icons">thumb_down</i></td>
+                            <td class="new badge purple darken-3 btnReprovar" onclick="ReprovarUsuario('@item.Id')"><i class="material-icons">thumb_down</i></td>
                         }
                         else if (item.Status == StatusConta.Aprovado)
                         {
                             <td>
                                 <span class="new badge green darken-3" data-badge-caption="" id="@item.Id">@Html.DisplayFor(modelItem => item.Status)</span>
                             </td>
-                            <td><a class="btn-floating blue darken-4" asp-controller="Usuarios" asp-action="GerenciarUsuarios" asp-route-id="@item.Id" asp-route-name="@item.UserName"><i class="material-icons">group</i></a></td>
+                            <td><a class="btn-floating blue darken-4" asp-controller="Usuarios" asp-action="GerenciarUsuario" asp-route-usuarioId="@item.Id" asp-route-name="@item.UserName"><i class="material-icons">group</i></a></td>
                         }
                         else
                         {
@@ -81,13 +81,13 @@
                             </td>
                         }
                     </tr>
-                  }
+                }
 
             </tbody>
         </table>
     </div>
 </div>
-
+<script src="~/js/OperacoesUsuario.js"></script>
 
 
 
