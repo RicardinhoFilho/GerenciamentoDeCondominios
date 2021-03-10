@@ -4,7 +4,7 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <form asp-action="Logout" asp-controller="Usuarios" id="formularioLogout">
+    <form asp-controller="Usuarios" asp-action="Logout"  id="formularioLogout">
         <ul>
             <li>
                 <a class="nav-link white-text" style="cursor:pointer;" onclick="document.getElementById('formularioLogout').submit();">Logout</a>

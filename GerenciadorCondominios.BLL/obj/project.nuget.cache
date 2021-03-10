@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7y7twBcNAOlc3i0qf1olZhnlsQgFhmiGoWQw6paYbR2LdvdNDC9YxzVXTYP9HuRQnVs5zztV9yPAr+e5IqUvLQ==",
+  "dgSpecHash": "j5thB0tS0AV9mXwJtDPqzpaxTgShpr0ClFOD0W+2kdNjDBF3qQL5hzOTYZqU2TFHtKxsVLcWeHrws8m2pA4ZtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

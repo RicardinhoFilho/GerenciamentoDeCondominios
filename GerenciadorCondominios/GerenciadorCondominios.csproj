@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewComponents\**" />
+    <Content Remove="ViewComponents\**" />
+    <EmbeddedResource Remove="ViewComponents\**" />
+    <None Remove="ViewComponents\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="bundleconfig.json" />
     <Content Remove="wwwroot\js\InicializarTooltips.min.js" />
     <Content Remove="wwwroot\js\IniciarMascaras.min.js" />
@@ -34,10 +41,6 @@
   <ItemGroup>
     <ProjectReference Include="..\GerenciadorCondominios.BLL\GerenciadorCondominios.BLL.csproj" />
     <ProjectReference Include="..\GerenciadorCondominios.DAL\GerenciadorCondominios.DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewComponents\" />
   </ItemGroup>
 
   <ItemGroup>

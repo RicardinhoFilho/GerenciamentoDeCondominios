@@ -19,7 +19,7 @@ namespace GerenciadorCondominios.Controllers
         private readonly IUsuarioRepositorio usuarioRepositorio;//Extraindo o usuário por injeção de dependências  
         private readonly IFuncaoRepositorio funcaoRepositorio;
         private readonly IWebHostEnvironment webHostEnvironment;//Está váriavel será a responsável por armazenar os dados da foto que iremos gravar em nosso repositório imag
-        public UsuariosController(IUsuarioRepositorio usuarioRepositorio,IFuncaoRepositorio funcaoRepositorio, IWebHostEnvironment webHostEnvironment)
+        public UsuariosController(IUsuarioRepositorio usuarioRepositorio, IFuncaoRepositorio funcaoRepositorio, IWebHostEnvironment webHostEnvironment)
         {
             this.usuarioRepositorio = usuarioRepositorio;
             this.funcaoRepositorio = funcaoRepositorio;
@@ -145,7 +145,7 @@ namespace GerenciadorCondominios.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Login()
+        public async  Task<IActionResult> Login()
         {
             if (User.Identity.IsAuthenticated)
             {
@@ -175,8 +175,8 @@ namespace GerenciadorCondominios.Controllers
                     }
                     else if (usuario.PrimeiroAcesso == true)
                     {
-                        
-                       return RedirectToAction(nameof(Index));
+
+                        return View("RedefinirSenha");
                     }
                     else
                     {
@@ -204,6 +204,7 @@ namespace GerenciadorCondominios.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
@@ -212,7 +213,7 @@ namespace GerenciadorCondominios.Controllers
         }
 
         [HttpGet]
-       public async Task<IActionResult> GerenciarUsuario(string usuarioId, string nome)
+        public async Task<IActionResult> GerenciarUsuario(string usuarioId, string nome)
         {
             if (usuarioId == null)
             {

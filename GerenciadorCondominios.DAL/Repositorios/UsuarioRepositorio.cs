@@ -61,6 +61,7 @@ namespace GerenciadorCondominios.DAL.Repositorios
             }
         }
 
+       
         public async Task DeslogarUsuario()
         {
             try

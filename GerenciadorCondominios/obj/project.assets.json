@@ -9428,11 +9428,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
       "projectName": "GerenciadorCondominios",
-      "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9449,11 +9449,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
+            "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
             },
-            "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj"
+            "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\GerenciamentoDeCondominios\\GerenciamentoDeCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj"
             }
           }
         }
